@@ -1,0 +1,120 @@
+Backend Development
+
+FullStack Development
+1.Frontend Developmet (HTML/CSS/JS/ReactJs)
+2.Backend Development (To Store Information)
+3.DevOps.
+
+Website
+1. Ecommere
+Client Server Architecture
+
+Client ------------>  Server
+chrome(S/W) -------------> Server  + Database(S/W)
+firefox
+opera
+ucbroser
+
+
+Database  ?
+
+
+Database are some software which store information permatnly
+
+Types of Database
+1.SQL Database
+	Structured Query Language
+	Eg
+	MySQL,Postgres, SQL Server, MS Access, Oracle, Sybase, Informix, 
+
+2. NoSQL Database
+
+
+
+https://w3school.com
+
+
+
+
+Anil ------->   Database
+
+Stored
+Manupulate
+
+
+
+Anil -----> Sunil
+
+Structured Query Language
+
+CRUD Operations
+1. C = Create
+2. R = Read
+3. U = Update
+4. D = Delete
+
+
+
+
+We want to learn backend Development/ Backend Eng.
+1. Database
+	1.1 SQL Based Database
+		1.1.1 MySQL
+		1.1.2 Postgress
+	1.2 NoSQL Based Database
+		1.2.1 MongoDB
+2. Programing Language
+	2.1 Javascript -> NodeJs
+	2.2 Python
+	2.3 Java
+	2.4 DotNet
+	2.5 PHP
+
+
+You need to install SQL Software on your Laptop/Machine
+
+Database (MySQL + SQL)
+
+1. XAMPP
+	https://www.apachefriends.org/
+	
+2. Open Shell
+3. # mysql -u user -pPassword
+3. # mysql -u root -pValue
+   # cmd   -flag1 flag1value -flag2 -flag2Value
+   # cmd   -arg1  arg1value   -arg2  -arg2Value	
+
+
+Where you store your infomation ?
+Database
+
+Database   -> Tables  ->>> Data
+
+
+Anil  ------>  Database
+
+
+Database
+	Table
+		Data
+
+
+Show all available Databases ?
+SQL Command; ?
+
+show databases;
+
+; -> Semicolon
+: -> colon
+
+
+How to create your own database ?
+CREATE DATABASE databasename;
+create database a_db;
+create database b_db;
+.
+.
+create database z_db;
+
+
+	
