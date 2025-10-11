@@ -15,23 +15,24 @@ firefox
 opera
 ucbroser
 
-
 Database  ?
-
-
 Database are some software which store information permatnly
 
 Types of Database
 1.SQL Database
 	Structured Query Language
 	Eg
-	MySQL,Postgres, SQL Server, MS Access, Oracle, Sybase, Informix, 
+	MySQL/MariaDb,Postgres, SQL Server, MS Access, Oracle, Sybase, Informix, 
 
 2. NoSQL Database
 
 
 
 https://w3school.com
+
+
+SQL
+Seequal
 
 
 
@@ -81,6 +82,7 @@ Database (MySQL + SQL)
 2. Open Shell
 3. # mysql -u user -pPassword
 3. # mysql -u root -pValue
+     mysql.exe
    # cmd   -flag1 flag1value -flag2 -flag2Value
    # cmd   -arg1  arg1value   -arg2  -arg2Value	
 
@@ -115,6 +117,36 @@ create database b_db;
 .
 .
 create database z_db;
+
+I want to store some information in database ?
+1. Create database
+	1.1  create database e_db;
+2. Go Inside that database
+	2.1 use <databaseName>;
+3. Create table
+	3.1 Check how many table are there ?
+		show tables;
+	3.2  create table students_tbl
+4. Describe table structure ?
+	4.1 describe <tableName>;
+	4.2 desc <tableName>;
+	4.3 explain <tableName>;
+
+5. Insert data
+	5.1 insert into <tableName>(C) values (V);
+6. Show the inserted data
+
+
+
+Name   Surname	Aadhar	Address City State MobNo 
+'Palak'
+Aashtha
+
+varchar(255)  -> Anil
+char(255)     -> Anil
+
+
+
 
 
 	
