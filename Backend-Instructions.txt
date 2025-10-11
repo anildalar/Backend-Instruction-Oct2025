@@ -145,7 +145,24 @@ Aashtha
 varchar(255)  -> Anil
 char(255)     -> Anil
 
-
+Todays Assignments
+a_db
+	a_tbl
+		1 colum
+		1 Recods
+b_db
+	b_tbl
+		2 coloum
+		2 Records
+c_db
+	c_tbl
+		3 coloum
+		2 Records	
+..
+z_db
+	z_tbl
+		26 coloumn
+		26 Records
 
 
 
