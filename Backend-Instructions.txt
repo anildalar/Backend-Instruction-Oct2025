@@ -142,8 +142,13 @@ Name   Surname	Aadhar	Address City State MobNo
 'Palak'
 Aashtha
 
+
+
+
+
 varchar(255)  -> Anil
 char(255)     -> Anil
+
 
 Todays Assignments
 a_db
@@ -164,6 +169,79 @@ z_db
 		26 coloumn
 		26 Records
 
+oklabs_db
+
+students_tbl
+
+Rolno Name	MobNo  Surname	 Aadhar	 Address	City	State	 
+1      Palak
+2      Aashtha
+		
+How to create database ?
+Syntax ?
+
+create database oklabs_db;
 
 
+How to add column to existing table ?
+
+How to add a new Coloum in a table ?
+alert
+Where to add the column ?
+
+
+Syntax ?
+	alter table <tableName> add <newColumn> <dataType> after <existingColumn>
+
+Example
+	alter table students_tbl add addr varchar(255) after surname;
+
+	alter table students_tbl add mobno varchar(255);
+
+	alter table students_tbl add rollno varchar(255) first;
+
+
+
+How to check sql records/entries ?
+
+Select
+
+
+
+
+insert into tablename (C) values ('V');
+
+
+insert into tablename (name) values ('ANIL');
+
+
+insert into tablename (name) values ('palak');
+
+
+
+alter table <tableName>  add/modify/drop <columname>
+
+alter table students_table drop mobno;
+
+
+
+name 	-> firstname
+surname -> lastname
 	
+
+alter table students_table modify oldcolumn newcolumn datatype;
+alter table students_table change oldcolumn newcolumn datatype;
+
+
+
+
+How to change column name temprorary ?
+	select 
+How to change column name permantly ?
+	alter table students_table change oldcolumn newcolumn datatype;
+
+
+Alias
+address   ->     addr
+
+
