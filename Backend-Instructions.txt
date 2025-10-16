@@ -245,3 +245,34 @@ Alias
 address   ->     addr
 
 
+Syntax
+	select * from <tableName> order by <columnName> asc|desc limit offset,limit;
+
+SQL Queries
+
+1. How you can get the last record of a table?
+	select * from employees_tbl order by empId desc limit 1;	
+
+google_db
+	employees_tbl
+		empId	empName	  salary  height		
+		1.	Anil	10000	   5.6
+		2.	Vijay	20000	   5.8
+		3.	
+
+2. How you can get the second last record of a table?
+3. How much salary is distributed on monthly basis ?
+
+
+
+
+
+function(actualArguemnt);
+sum(salary)
+
+Find the employee with the highest salary.
+
+
+
+
+
