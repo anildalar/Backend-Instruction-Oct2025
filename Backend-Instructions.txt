@@ -264,15 +264,59 @@ google_db
 3. How much salary is distributed on monthly basis ?
 
 
-
-
-
 function(actualArguemnt);
 sum(salary)
 
 Find the employee with the highest salary.
+Lets take a real world example to learn SQL
+
+
+JustDial.com is a online Directory
+
+System Design
+1. HLD High Level Design
+2. LLD Low Level Design
+	2.1 Database Structure Planning
+
+xyzdial.com
+	Database + tables + Structure
+
+
+justdial_db
+	1. business_categories
+		id  bcname  
+	2. businesses
+		id  bname   bc_id	
+
+
+SupremeElectronic -> Electronics
+USha Clinic	  -> Hospital
+Gyanodaya College -> Education	
 
 
 
 
+
+create table tableName(
+	colum1 datatype constraint attributes
+)
+
+
+
+hotels     -> Hotel Bharat Palace
+restaurant -> Hanuman Chat Center
+
+
+
+How you can join table data ?
+1. Inner Join
+
+Syntax
+
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+select business.bname as 'Business Name',business_categories.bc_name as Category from business inner join business_categories on business.bc_id=business_categories.id;
 
