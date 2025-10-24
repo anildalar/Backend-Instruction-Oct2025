@@ -321,49 +321,26 @@ ON table1.column_name = table2.column_name;
 select business.bname as 'Business Name',business_categories.bc_name as Category from business inner join business_categories on business.bc_id=business_categories.id;
 
 
-SQL Wildcards Searching..
-
-
-justdial_db
-	business_tbl
-		id name
-
-
-My Supreme Sound
-Great Supreme
-
-
-
-
-Syntax
-
-	SELECT * FROM <tableName> WHERE <someCondition> LIKE '<somepattern>';
-Example
-	select * from business where bname like 'supreme%'
-				
-		supreme x
-		xyz supreme
-		abc supreme xyz
-
 
 
 justdial_db
 	1. business_categories
 		id  bcname  
 	2. businesses
-		id  bname   bc_id
-	3. users
-		id  fname mname lname
+		id  bname   bc_id cities_id 
+	4. cities
+		id name
+	5. states
+		id name cities_id counties_id
+	6. countries
+		id name
+	7. users	
 
 
-nil
-
-Anil
-Swapnil
-
-
+Supreme Electronics	Neemuch
+Supreme Electronics 	Indore
+Supreme Electronics	Delhi
+ABC Electronics		Mumbai
 
 
-
-
-
+alter table business add cities_id int unsigned;
