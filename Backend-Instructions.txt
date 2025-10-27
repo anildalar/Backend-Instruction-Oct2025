@@ -322,19 +322,20 @@ select business.bname as 'Business Name',business_categories.bc_name as Category
 
 
 
+Online Business Directory
 
 justdial_db
 	1. business_categories
 		id  bcname  
 	2. businesses
 		id  bname   bc_id cities_id 
-	4. cities
+	3. cities
 		id name
-	5. states
+	4. states
 		id name cities_id counties_id
-	6. countries
+	5. countries
 		id name
-	7. users	
+	6. users	
 
 
 Supreme Electronics	Neemuch
@@ -380,3 +381,44 @@ select * from table1 inner join table2 inner join table3 on table1.column=table2
 
 
 tablename.columnname
+
+
+Inner Join
+
+table2		table1			table3
+Country 	States			City
+India		Madhya Pradesh		Indore
+USA		California		San Francisco	
+USA		Florida			Miami	
+
+output Inner Join
+
+table1
+table2
+table3
+
+select * from table1 inner join table2 inner join table3 on table1.column=table2.column and table3.column=table2.coloumn
+
+select * from states inner join countries inner join cities on states.countries_id=countries.id and cities.states_id=states.id;
+
+
+
+columnName	DataType	Constraint 	Attribute
+name		varchar(255)	unique
+
+MariaDB [justdial_db]> select countries.name,states.name,cities.name from states inner join countries inner join cities on states.countries_id=countries.id and cities.states_id=states.id;
++-------+----------------+---------------+
+| name  | name           | name          |
++-------+----------------+---------------+
+| India | Madhya Pradesh | Neemuch       |
+| India | Madhya Pradesh | Indore        |
+| India | Madhya Pradesh | Delhi         |
+| India | Madhya Pradesh | Mumbai        |
+| USA   | California     | San Francisco |
+| USA   | Florida        | Miami         |
++-------+----------------+---------------+
+6 rows in set (0.001 sec)
+
+
+
+
