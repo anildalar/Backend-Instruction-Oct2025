@@ -402,13 +402,12 @@ select * from table1 inner join table2 inner join table3 on table1.column=table2
 select * from states inner join countries inner join cities on states.countries_id=countries.id and cities.states_id=states.id;
 
 
-
 columnName	DataType	Constraint 	Attribute
 name		varchar(255)	unique
 
 MariaDB [justdial_db]> select countries.name,states.name,cities.name from states inner join countries inner join cities on states.countries_id=countries.id and cities.states_id=states.id;
 +-------+----------------+---------------+
-| name  | name           | name          |
+| Country  | name           | name          |
 +-------+----------------+---------------+
 | India | Madhya Pradesh | Neemuch       |
 | India | Madhya Pradesh | Indore        |
@@ -421,4 +420,73 @@ MariaDB [justdial_db]> select countries.name,states.name,cities.name from states
 
 
 
+Client --requirement---> TCS/Wiporo/Infosys Justdial.com
+Anil
 
+SystemArchitech 10yrs-20Yrs
+
+
+
+SystemDesign
+	1. HLD -> HighLevelDesign
+	2. LLD -> LowLevelDesign
+		LLD is all about the planning of tables in database
+
+
+1. User can review the business
+	1-5
+2. User can write the review about the business
+3. User can Post Images about the business
+
+
+
+Requirement Docs  ----> SystemArchitech/BackendEng.
+		  ----> UX/UI (Designer)  -> Figma/AdobeXD
+
+
+justdial_db
+	1. business_categories
+		id  bcname  
+	2. businesses
+		id  bname   bc_id cities_id 
+	3. cities
+		id name
+	4. states
+		id name cities_id counties_id
+	5. countries
+		id name
+	6. users
+		id name surname
+	7. reviews 
+		id reviewContent  reviewStars business_id users_id review_images_id
+		   varchar(255)    5
+	8. review_images
+		id imagePath userId
+
+
+? Who is giving review? users_id
+  To whome he is giving review?  business_id
+  What review he is giving?  reviewContent
+  How much stars he is giving ?  reviewStars
+  Can user upload Images ?	
+
+
+reviewStars tinyint unsinged
+	0-255
+	5
+reviewStars tinyint
+	-128 to 127
+
+
+
+Anil    ->   Supreme Ev    	   ->   5    Excellent   
+
+Akash    -> Hotel Bharat Palace    ->   1    Very Bad
+
+
+
+Inner Join with 3 tables
+
+users
+business
+reviews table1
