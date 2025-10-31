@@ -24,6 +24,7 @@ Types of Database
 	Eg
 	MySQL/MariaDb,Postgres, SQL Server, MS Access, Oracle, Sybase, Informix, 
 
+
 2. NoSQL Database
 
 
@@ -490,3 +491,156 @@ Inner Join with 3 tables
 users
 business
 reviews table1
+
+
+
+Employess
+
+id	name	salary
+
+a		1000
+b
+c		2000
+d		3000
+e		
+
+2nd Higest Salary
+
+select * from tableName order by columnName asc|desc limit offset,limit;
+
+select * from employees order by salary desc limit 1,1;
+
+Syntax ?
+
+insert into tableName (C) values (V);
+
+update tableName set coloumName=value,.. where someCondition
+
+
+
+
+
+
+
+Employees
+
+id	name		salary
+
+1	a		1000
+2	b		2000
+3	c		3000
+4	d		4000
+
+id	name		tenpercentageOfSalary
+
+1	a		100
+2	b		200
+3	c		300
+4	d		400
+
+select id,name,(salary/10) as tenpercentageOfSalary from employees;
+
+DDL
+	create
+	drop
+	alter
+	truncate
+DML
+   insert
+   update
+   delete
+DQL
+   select
+Roles :-
+	System Roles :-
+
+
+System Design
+
+Client -----> Software
+Mr X ---------> Justdial.com ---> Software
+
+Backend Eng./System Architec
+
+
+Backend System Roles
+
+1. System Roles
+
+Hospital Management System
+System Roles(User TYpes)
+	0. Admin
+	1. Doctor
+	2. OPD incharge
+	3. Management
+	4. Patient
+
+Ecommerce Platform
+	1. Admin
+	2. Customer
+	3. Employees
+	
+Online Business Directory
+	1. Admin -> Software Creator
+	2. BusinessOwner
+	3. Employees
+
+
+
+Roles and Permission
+RBAC = Role Based Access Control
+
+
+justdial_db
+	1. business_categories
+		id  bcname  
+	2. businesses
+		id  	bname   	bc_id 	cities_id  users_id
+		o	Raj Saloon	1	1		2
+	3. cities
+		id name
+	4. states
+		id name cities_id counties_id
+	5. countries
+		id name
+	6. users
+		id 	name 	surname		roles_id
+		1	Anil	Dollor		1
+		2. 	Manish 	Sn		2
+e
+	7. reviews 
+		id reviewContent  reviewStars business_id users_id review_images_id
+		   varchar(255)    5
+	8. review_images
+		id imagePath userId
+	9. roles
+		id 	name
+		1	admin
+		2. 	businessowner
+		3.	employee
+
+Get the full details of business owner from city 'Neemuch'
+
+select * from business inner join cities inner join users inner join roles inner join business_categories on business.bc_id=business_categories.id and business.cities_id=cities.id and business.users_id=users.id;
+
+
+MariaDB [justdial_db]> select * from business inner join cities inner join users inner join roles inner join business_categories on business.bc_id=business_categories.id and business.cities_id=cities.id and business.users_id=users.id and users.roles_id=roles.id where cities.name like '%Neemuch%';
++----+------------+-------+-----------+----------+----+---------+-----------+----+--------+-------+-------+----------+----+---------------+----+---------+
+| id | bname      | bc_id | cities_id | users_id | id | name    | states_id | id | fname  | mname | lname | roles_id | id | name          | id | bc_name |
++----+------------+-------+-----------+----------+----+---------+-----------+----+--------+-------+-------+----------+----+---------------+----+---------+
+| 19 | Raj Saloon |     6 |         1 |        5 |  1 | Neemuch |         1 |  5 | Manish | NULL  | Sen   |        2 |  2 | businessOwner |  6 | saloon  |
++----+------------+-------+-----------+----------+----+---------+-----------+----+--------+-------+-------+----------+----+---------------+----+---------+
+1 row in set (0.000 sec)
+
+
+MariaDB [justdial_db]>
+
+MariaDB [justdial_db]> select business.bname,cities.name,roles.name,business_categories.bc_name from business inner join cities inner join users inner join roles inner join business_categories on business.bc_id=business_categories.id and business.cities_id=cities.id and business.users_id=users.id and users.roles_id=roles.id where cities.name like '%Neemuch%';
++------------+---------+---------------+---------+
+| bname      | name    | name          | bc_name |
++------------+---------+---------------+---------+
+| Raj Saloon | Neemuch | businessOwner | saloon  |
++------------+---------+---------------+---------+
+1 row in set (0.001 sec)
+
+MariaDB [justdial_db]>
