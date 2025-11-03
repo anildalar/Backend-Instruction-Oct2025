@@ -687,11 +687,6 @@ select sha2('123', 512)
 
 select MD5('123');
 
-
-
-
-
-
 SQL Subqueries/Nested Query -> Count
 1. List users who have not written any review.
 	select * from users where  ( select count() from   )
@@ -731,7 +726,7 @@ employees
 
 
 Question
-Get the salary of all employes whose salary is greater than empId=2
+Get the salary of all employees whose salary is greater than empId=2
 
 select * from employees where salary >= (select salary from employees where empid=2)
 
