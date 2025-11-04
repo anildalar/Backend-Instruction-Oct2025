@@ -730,3 +730,148 @@ Get the salary of all employees whose salary is greater than empId=2
 
 select * from employees where salary >= (select salary from employees where empid=2)
 
+
+
+
+
+
+
+
+
+
+https://www.prisma.io/
+
+
+
+1\. NodeJs Library --> DB Operations
+
+
+
+
+
+Prisma ORM
+
+&nbsp;	Object Relational Manager
+
+
+
+
+
+Types of Database
+
+1.SQL Database
+
+&nbsp;	Structured Query Language
+
+&nbsp;	Eg
+
+&nbsp;	MySQL/MariaDb,Postgres, SQL Server, MS Access, Oracle, Sybase, Informix, 
+
+
+
+
+
+2\. NoSQL Database
+
+
+
+&nbsp;	MongoDB
+
+
+
+Prisma ORM  -----> Code -----> Run------> DB Operation   SQL/NoSQL
+
+
+
+
+
+COde --->Write---> File ??? schema.prisma
+
+
+
+
+
+npm init -y
+
+
+
+This command will create a file of type JSON
+
+i.e package.json
+
+
+
+JSON ?
+
+&nbsp;	JavaScript Object Notation
+
+
+
+
+
+JavaScript Object Name,Surname ?
+
+
+
+{
+
+&nbsp;	Key:Value	
+
+}
+
+{
+
+&nbsp;	"name":"Anil",
+
+&nbsp;	"surname":"Dollor"	
+
+}
+
+
+
+
+
+
+
+File text type
+
+
+
+anil.txt
+
+file pdf type
+
+anil.pdf
+
+
+
+
+
+
+
+NodeJs
+
+
+
+
+
+Prisma ORM is a 3rd party library
+
+
+
+3rd party Vs Built-in
+
+
+
+
+
+install -------> Internet Download------->**https://npmjs.com**
+
+
+
+
+
+l
+
+npx = Node Package Execute
+
