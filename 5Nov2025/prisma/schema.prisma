@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model friends {
+  id    Int     @id @default(autoincrement()) @db.UnsignedInt
+  fname String? @db.VarChar(255)
+  lname String
+}
+
+model teachers {
+  id    Int     @id @default(autoincrement()) @db.UnsignedInt
+  fname String? @db.VarChar(255)
+  lname String? @db.VarChar(255)
+}
+
+model students {
+  id    Int     @id @default(autoincrement()) @db.UnsignedInt
+  fname String? @db.VarChar(255)
+  lname String? @db.VarChar(255)
+}
+
+
