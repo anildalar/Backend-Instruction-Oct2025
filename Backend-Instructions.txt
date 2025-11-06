@@ -844,34 +844,92 @@ file pdf type
 anil.pdf
 
 
-
-
-
-
-
 NodeJs
-
-
-
 
 
 Prisma ORM is a 3rd party library
 
-
-
 3rd party Vs Built-in
-
-
-
 
 
 install -------> Internet Download------->**https://npmjs.com**
 
 
-
-
-
-l
-
 npx = Node Package Execute
+
+
+How to perform DB Operations using NodeJs code ?
+
+
+DB Operation 
+
+Shell ---> SQL CMD ---> Enter---> SQL Execute ----> DB Operation
+
+
+
+JS Code  ----- Execute/RUn ---> DB Operation
+
+3rd Lib
+
+Prisma ORM
+Prisma is company
+ORM is a product
+
+https://www.prisma.io/
+
+ORM = Object Relational Mapper
+
+It can work on every kind of Data
+Type of DB
+	1. SQL Based DBs
+		MySQL,Maridb,Postgress,...
+	2. NoSQL Based DBs
+		MongoDB
+		Document bASED
+
+
+
+DB Operation ---> Prisma ORM
+
+
+model  === Tables
+
+
+
+
+1. npm install prisma --save-dev
+2. npm install @prisma/client
+3. npx prisma init  ---> pri
+	This will create 
+		1. .env
+		2. schema.prisma 
+
+4. npx prisma migrate dev --name init
+
+5. npx prisma studio
+
+
+   What is prisma Studio ?
+	Prisma Studio is a GUI Software for Database
+
+CLI  vs GUI
+
+
+
+anil_db
+	students_tbl
+		id fname   last
+
+	course_tbl
+		id name
+
+
+
+How can I make Prisma generate or update its schema based on an existing database that already has tables?
+
+
+
+
+
+
 
