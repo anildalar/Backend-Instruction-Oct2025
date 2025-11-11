@@ -16,7 +16,7 @@ opera
 ucbroser
 
 Database  ?
-Database are some software which store information permatnly
+Database are some software which store information permanently 
 
 Types of Database
 1.SQL Database
@@ -26,7 +26,7 @@ Types of Database
 
 
 2. NoSQL Database
-
+	MongoDB
 
 
 https://w3school.com
@@ -885,23 +885,17 @@ Type of DB
 		MySQL,Maridb,Postgress,...
 	2. NoSQL Based DBs
 		MongoDB
-		Document bASED
-
-
-
+		Document Based
 DB Operation ---> Prisma ORM
 
-
 model  === Tables
-
-
 
 
 1. npm install prisma --save-dev
 2. npm install @prisma/client
 3. npx prisma init  ---> pri
 	This will create 
-		1. .env
+		1. .env   DATABASE_URL=""
 		2. schema.prisma 
 
 4. npx prisma migrate dev --name init
@@ -932,4 +926,189 @@ How can I make Prisma generate or update its schema based on an existing databas
 
 
 
+Prisma ORM 
+SQL Based DBs
+	MySQL ----> XAMPP  -----> PhpMyAdmin (GUI)
+NoSQL Based DBs
+	MongoDB   ---> MongoDB --> MongoDB Compass(GUI)
+
+	
+Prisma 
+1. Prisma CLI
+2. Prisma Client
+
+
+MySQL
+	Database
+		Tables
+			Record/Data/Entries
+MongoDB
+	Database
+		Collection
+			Documents
+	
+
+
+
+Prisma Client
+
+
+prisma.table.method()
+prisma.modal.method()
+prisma.students.findMany()-----> Select * from students
+
+
+
+How to check if mongodb service is running or not ?
+
+
+Window + R
+	services.msc
+		search for mongodb service
+
+
+SQL Based DBs
+	Postgress -----> PGAdmin (GUI)
+NoSQL Based DBs
+	MongoDB   ---> MongoDB --> MongoDB Compass(GUI)
+
+
+protocol://u:p@hostname:portno
+
+protocol://hostname:portno
+mongodb://localhost:27017
+
+
+Prisma ORM 
+SQL Based DBs
+	Postgress ---->   PGAdmin (GUI)
+	1. PostressDB S/w
+	2. PGAdmin S/w
+
+psql ---> CLI (Back Terminal)
+
+PGAdmin ---> GUI
+
+
+mysql -u root -p
+
+.\psql.exe -U admin -h localhost -p 5432
+PS C:\Program Files\PostgreSQL\18\bin> .\psql.exe -U postgres -h localhost -p 5432
+
+\c <dbname>
+
+
+PS C:\Program Files\PostgreSQL\18\bin> .\psql.exe -U postgres -h localhost -p 5432 -d <dbName>
+
+ .\psql.exe -U postgres -P admin -h localhost -p 5432 -d justdial_db
+
+NextJs Day 1
+
+NextJs is a Fullstack Framwork
+
+
+Frontend + Backend = FullStack Eng..
+
+Frontend = ReactJs/VueJs/AngualarJs
+
+Backend Eng.=  ExpressJs/NodeJs
+
+ExpressJs ---> 4months
+
+NextJs ---> 6months
+
+
+NextJs (FullStack Eng..)
+
+NextJs (ReactJs + ExpressJs/Nodejs)
+ 
+
+JavaScript ------->   ReactJs
+JavaScript --------> ExpressJs
+
+
+JavaScript ------------> NextJs
+Variable is used to store data in memory with temporary
+Database is used to store data in HDD with permanent
+
+Function is a reusable block of code
+
+Class is concept that combined function and variable in one unit
+
+Function + Variable -----> Class
+
+
+
+
+Object ?
+
+
+
+You have to generate package.json
+
+npm init -y
+
+
+
+npx create-next-app@latest ----> package.json
+
+
+
+NodeJs
+
+
+JavaScript  ---> Improved version--> Microsoft----> Typescript
+
+
+
+
+
+HTML +  CSS  + JS
+
+
+Object ?
+
+1. JS Object  
+	1.1  {property:value}
+	     {key:value}
+2. Class Object
+
+1. Variable is used to store data
+2. Functions is reusable block of code
+3. Class (Variable+Function)
+4. Object
+
+
+
+
+
+
+
+ls  ---> list
+
+d-----   ------> Permission String-----> Directory
+------   ------> Permission String-----> File
+
+
+cd -----> change directory
+
+
+
+npm run dev  -----> layout.js------>page.js(HTML+CSS+JS)
+
+
+
+
+Chrome Extension
+	1. Webappylyzer
+
+VSCode Extension
+	1. Fold Level  ->denjay 
+
+
+
+Empty Tags
+
+<>
+</>
 
