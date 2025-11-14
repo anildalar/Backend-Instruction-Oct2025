@@ -1104,11 +1104,64 @@ Chrome Extension
 
 VSCode Extension
 	1. Fold Level  ->denjay 
-
-
+	2. Simple React Snippets -----> Burke Holland
+	3. ES7+ React/Redux/React-Native snippets ----->dsznajder
 
 Empty Tags
 
-<>
-</>
+<> <--- Start empty tag
+</> <--- End empty tag
+
+
+<h1><h1>
+
+<p>
+
+<a>
+
+
+NextJs Support 2 kind of ROuters
+1. App Router (Recomended Newest) NextJs 15.x
+2. Page Router  (Old way)
+
+Routers --> Traffice Inpectors
+
+
+Traffice ---> COrrection Direction ---> Forward/Route
+
+
+
+
+
+http://localhost:3000/routes
+
+http://localhost:3000/aboutus -------> pages/aboutus/index.js
+
+http://localhost:3000/blog-----------> pages/blog/index.js
+
+
+http://localhost:3000/contactus    ----------->  pages/CONTACTUS/index.js
+
+rfc -> React Functional Component
+
+
+
+2. App Router
+
+http://localhost:3000/aboutus -------> app/aboutus/page.js
+
+http://localhost:3000/blog-----------> app/blog/page.js
+
+
+http://localhost:3000/contactus    ----------->  app/contactus/page.js
+
+http://localhost:3000/aboutus
+http://localhost:3000/blog
+http://localhost:3000/contactus
+
+
+
+
+
+
 
