@@ -1101,6 +1101,7 @@ npm run dev  -----> layout.js------>page.js(HTML+CSS+JS)
 
 Chrome Extension
 	1. Webappylyzer
+	2. Measure-it
 
 VSCode Extension
 	1. Fold Level  ->denjay 
@@ -1158,6 +1159,78 @@ http://localhost:3000/contactus    ----------->  app/contactus/page.js
 http://localhost:3000/aboutus
 http://localhost:3000/blog
 http://localhost:3000/contactus
+
+
+
+What is components in ReactJs ?
+
+Components are basic building block of UI.
+Component are resuable block of of UI Element. 
+
+
+
+HTML  --> Structure
+CSS
+
+Cascading Stylesheet 
+
+
+HTML + CSS  ---> Basic Component
+
+
+
+HTML  --->
+
+Page1 --------Acnchor <a></a>------> Page2
+
+
+Nextjs ----->ReactJs  --->
+
+Page1 --------Acnchor <a></a>------> Page2
+
+
+http://localhost:3000/aboutus  -> RFC
+http://localhost:3000/blog     -> RFC
+http://localhost:3000/contactus -> RFC
+
+
+http://localhost:3000/ourmission -> RCC (Outdated/Depericated)
+
+
+src/app/ourmission/page.js
+src/app/ourmission/page.jsx  --> Javascript & XML
+						Extensible Markup Language
+
+
+src/app/ourmission/page.ts
+src/app/ourmission/page.tsx  --> Javascript & XML
+
+
+
+
+Javascript ES6---> Import/Export
+
+EcmaScript 
+
+
+
+From India we can export anything
+
+
+
+In Javascript we can import/export anything(Any JS Concept)
+
+
+
+In JS There are 2 ways to export
+1. Default Export
+2. Named Export
+
+
+
+
+
+
 
 
 
