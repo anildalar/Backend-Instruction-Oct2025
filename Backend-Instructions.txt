@@ -1206,35 +1206,121 @@ src/app/ourmission/page.ts
 src/app/ourmission/page.tsx  --> Javascript & XML
 
 
-
-
 Javascript ES6---> Import/Export
 
 EcmaScript 
 
-
-
 From India we can export anything
 
-
-
 In Javascript we can import/export anything(Any JS Concept)
-
-
 
 In JS There are 2 ways to export
 1. Default Export
 2. Named Export
 
 
+How to create an API in NextJs?
+
+API ?
+
+Application Programming Interface
+
+Client Server Architecture
+
+
+Client-------------------------Server (API)
+
+Client(Browser)--------
+
+www.google.com---------Request-------->Server (Webserver) (Database)
+
+Webserver
+	1. Apache
+	2. Nginix
+	3. Tomcat
+
+
+www.google.com <---------Response--------Server (Webserver)
+
+
+
+Client--------------Data-----------Server
+
+
+Client--------------Standard Medium-----------Server
+
+
+Client--------------Anil-------------->Server
+
+
+Standar Medium of Data that can be exchanged between client and server
+1.JSON
+	Javascript Object Noation
+	
+	{
+		1. P:V
+		"CompanyName":"Anil Pvt Ltd"
+		
+	}
+2. XML
+3. SOAP
+
+
+
+
+NextJs  <-----NodeJs<------ Javascript
+
+We need to create an API in NextJs ?
+
+
+Reference
+
+API ?
 
 
 
 
 
 
+Client---------------------------->Server (Database <-Data)
 
 
+Client --------------------------->Request---------------------> Server
+https://jsonplaceholder.typicode.com/users
+
+http://localhost:3000/aboutus
+
+Client <------------ JSON Response---------------- Server
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    }
+]
+
+
+https://jsonplaceholder.typicode.com/photos
+
+
+
+
+
+NextJs
+1. Page
+	App/aboutus/page.js
+2. Api 
+	App/users/route.js
 
 
 
