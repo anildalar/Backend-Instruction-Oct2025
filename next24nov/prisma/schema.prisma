@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model business {
+  id        Int     @id @default(autoincrement()) @db.UnsignedInt
+  bname     String? @db.VarChar(255)
+  bc_id     Int?    @db.UnsignedInt
+  cities_id Int?    @db.UnsignedInt
+  users_id  Int?    @db.UnsignedInt
+}
+
+model business_categories {
+  id      Int     @id @default(autoincrement()) @db.UnsignedInt
+  bc_name String? @unique(map: "bc_name") @db.VarChar(255)
+}
+
+model cities {
+  id        Int     @id @default(autoincrement()) @db.UnsignedInt
+  name      String? @db.VarChar(255)
+  states_id Int?    @db.UnsignedInt
+}
+
+model countries {
+  id   Int     @id @default(autoincrement()) @db.UnsignedInt
+  name String? @unique(map: "name") @db.VarChar(255)
+}
+
+model employees {
+  id     Int      @id
+  name   String?  @db.VarChar(50)
+  salary Decimal? @db.Decimal(10, 2)
+}
+
+model reviews {
+  id               Int     @id @default(autoincrement()) @db.UnsignedInt
+  reviewContent    String? @db.LongText
+  reviewStars      Int?    @db.UnsignedTinyInt
+  business_id      Int?    @db.UnsignedInt
+  users_id         Int?    @db.UnsignedInt
+  review_images_id Int?    @db.UnsignedInt
+}
+
+model roles {
+  id   Int     @id @default(autoincrement()) @db.UnsignedInt
+  name String? @db.VarChar(255)
+}
+
+model states {
+  id           Int     @id @default(autoincrement()) @db.UnsignedInt
+  name         String? @unique(map: "name") @db.VarChar(255)
+  countries_id Int?    @db.UnsignedInt
+}
+
+model users {
+  id       Int     @id @default(autoincrement()) @db.UnsignedInt
+  fname    String? @db.VarChar(255)
+  lname    String? @db.VarChar(255)
+  email    String? @unique(map: "email") @db.VarChar(255)
+  password String? @db.VarChar(255)
+}

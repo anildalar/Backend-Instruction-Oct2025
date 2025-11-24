@@ -1316,7 +1316,7 @@ https://jsonplaceholder.typicode.com/photos
 
 
 
-NextJs
+NextJs 16.x
 1. Page
 	App/aboutus/page.js
 2. Api 
@@ -1324,3 +1324,190 @@ NextJs
 
 
 
+https://www.justdial.com/Jabalpur/Hotels-in-Rajiv-Gandhi-Chowk/nct-10255012
+
+
+protocal://subdomain.primarydomain.tld/routesegment1/routesegment2/routesegment3
+
+
+https://www.justdial.com/Mumbai/Hotels-in-Rajiv-Gandhi-Chowk/nct-10255012
+
+
+
+Type of Routes
+1. Fixed Routes
+2. Dynamic Routes
+
+
+System Design
+1. HLD
+2. LLD
+	Tables Planning
+	URL Structure Planing.
+
+
+I want to search Hospital in Indore
+What will be url structure ?
+
+https://example.com/cityName/category/
+
+I want to search Hotel in Delhi
+What will be url structure ?
+
+https://example.com/Delhi/Hotels/
+
+
+Example of Dynamic Routes
+https://example.com/Indore/Hotels/
+
+
+https://example.com/[cityname]/[category]/
+
+How to access/display URL parametes on the page in NextJs
+
+
+JS Object
+{
+	P:V
+}
+
+{
+	"anil":"anil"
+}
+Shortcut
+
+{
+	"anil"
+}
+
+
+async <-- parent
+await <-- child
+
+
+I want to search Hotel in Delhi
+What will be url structure ?
+
+https://example.com/[cityname]/[category]/
+
+
+Database ?
+SqlBased
+	MySQL <----SQL CRUD
+	Postgress
+
+NoSQL
+	MongoDB?
+
+
+
+justdial_db
+	1. business_categories
+		id  bcname  
+	2. businesses
+		id  	bname   	bc_id 	cities_id  users_id
+		o	Raj Saloon	1	1		2
+	3. cities
+		id name
+	4. states
+		id name cities_id counties_id
+	5. countries
+		id name
+	6. users
+		id 	name 	surname		roles_id
+		1	Anil	Dollor		1
+		2. 	Manish 	Sn		2
+	7. reviews 
+		id reviewContent  reviewStars business_id users_id review_images_id
+		   varchar(255)    5
+	8. review_images
+		id imagePath userId
+	9. roles
+		id 	name
+		1	admin
+		2. 	businessowner
+		3.	employee
+
+
+
+
+
+justdial_db
+	1. business_categories
+		id  bcname  
+	2. businesses
+		id  	bname   	bc_id 	cities_id  users_id
+		o	Raj Saloon	1	1		2
+	3. cities
+		id name
+
+https://example.com/Delhi/Hotel/
+
+
+mysql -u root -p
+
+cmd  cli_arg1 cli_arg2 cli_arg3
+
+
+Prisma ORM
+
+JS Object
+{
+	P:V
+}
+
+
+
+
+
+1. Function defination
+function page(fa1,fa2,fa2){
+
+}
+2. Function calling
+
+page(aa1,aa2,aa3)
+
+
+function page(fa1){
+
+}
+
+function page({page:"page"}){
+
+}
+function page({page}){
+
+}
+
+
+
+Client---------------------------->Server (Database <-Data)
+
+
+Client ---------------------------------Request--------------------------> Server (NextJs)
+http://localhost:3000/delhi/hotel
+
+Client <--------------------------------Response------------------------- Server(NextJs)
+
+page Neemuch hotels
+
+
+
+
+Client(NextJs) <--------------------------------Response------------------------- Server(NextJs) <-----PrimsaORM---> Database MySQL
+
+page Neemuch hotels
+
+
+
+NextJs is a fullstack Framwork
+
+
+3rd Party Library
+
+NodeJs 3rd Libary
+
+npm install libname ------> https:://npmjs.com
+
+npm install primsa -------->
