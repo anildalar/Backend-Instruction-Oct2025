@@ -1,0 +1,27 @@
+{
+  "name": "next26nov25",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.0.1",
+    "@prisma/client": "^7.0.1",
+    "dotenv": "^17.2.3",
+    "next": "16.0.4",
+    "pg": "^8.16.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/pg": "^8.15.6",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.4",
+    "prisma": "^7.0.1"
+  }
+}
