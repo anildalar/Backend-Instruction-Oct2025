@@ -1235,8 +1235,8 @@ Client(Browser)--------
 www.google.com---------Request-------->Server (Webserver) (Database)
 
 Webserver
-	1. Apache
-	2. Nginix
+	1. Apache Webser
+	2. Ngnix
 	3. Tomcat
 
 
@@ -1511,3 +1511,114 @@ NodeJs 3rd Libary
 npm install libname ------> https:://npmjs.com
 
 npm install primsa -------->
+
+
+
+https://example.com/Delhi/Hotel/
+
+Result/Records
+
+
+
+CRUD 
+
+
+R -> Read
+
+
+Prisma 7.x
+NextJs 16.x
+
+Database Postgress
+
+
+MySQL Vs POstgress
+
+
+SQL BASED DBs
+
+
+
+Justdial
+
+TechStack
+	1. NextJs 16.x
+	   Prisma 7.x
+	   Postgress
+
+
+
+Which kind of API is this
+http://localhost:3000/api/todos <--route.js
+
+1. GET API
+2. POST API
+3. PUT API
+4. PATCH API
+5. DELETE API
+				   
+
+Clinet -----------> Server
+Clinet <---JSON---- Server <<---- Database
+JSON
+
+{
+	P:V	
+}
+
+
+Client(NextJs) <------------Response----------- Server(NextJs) <-----PrimsaORM---> Database(PG) 
+
+Frontend
+
+
+http://localhost:3000/todos
+
+
+src/app/todos/page.js <---- page.js is a reactJs component
+
+
+Aboutus
+Contactus
+
+
+Todos Page
+
+In ReactJs 
+There are 2 types of component
+1. RFC <- React Functional Component
+2. RCC <- React Class Component  
+
+
+
+NextJs Component
+
+1. ClientSide Component (React Component) at top "use client"
+2. ServerSide Component
+
+
+
+Function
+1. Defination
+2. Calling
+
+
+
+
+Api Calling
+
+1. XMLHttpRequest (JS Built-in)
+2. Fetch API (JS Built-in)
+3. Axios LIb (3rd party Lib)
+
+
+npm install libname ------> npmjs.com
+
+
+[{…}, {…}, {…}, {…}, {…}]
+
+
+[] = Arrray
+{} = Object
+
+[{},{},{}] = Array of Objects
