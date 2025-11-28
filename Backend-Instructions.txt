@@ -1622,3 +1622,47 @@ npm install libname ------> npmjs.com
 {} = Object
 
 [{},{},{}] = Array of Objects
+
+
+NextJs Component
+
+1. ClientSide Component (React Component) at top "use client"
+2. ServerSide Component
+
+
+
+
+Assignment
+1. Display Todos List on Frontend using ClientSide component 'use client'
+	Rendering is done at client side
+	
+	CLient -----Request----> Server <<---- Database	
+	Clinet <-----JSON Response<---- Server <<---- Database	
+	AfterPage Reload (useEffect)
+	Clinet -----ApiCall----> Server <<---- Database
+	Data Show
+	
+2. Display Todos List on Frontend using ServerSide component
+	Server Render
+	CLient -----Request----> Server(page builld/render) <<---- Database
+	CLient -----Response---- Server(page builld/render) <<---- Database
+	List
+
+
+Clinet <---JSON---- Server <<---- Database
+
+
+Client(NextJs) <------------Response----------- Server(NextJs) <-----PrimsaORM---> Database(PG) 
+
+
+ul = unordered List
+li = List Items
+
+
+
+function Anil(fa1,fa2,fa3,fa4){
+	//Function Body
+}
+
+
+

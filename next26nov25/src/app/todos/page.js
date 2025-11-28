@@ -1,4 +1,5 @@
 'use client'
+// THis is an example of clientside component
 
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
@@ -8,6 +9,7 @@ function page() {
     const [todos, setTodos] = useState([]);
 
     // You have to call the api
+    //useEffect will be called after page reload
     useEffect(()=>{
         console.log('OK');
         try {
@@ -36,6 +38,7 @@ function page() {
     //array.map(function(currentValue, index, arr), thisValue)
     return (
         <>
+            <h1>This is an example of Client Side Compoentn</h1>
             <div>Todos List</div>
             <ul>
                 
