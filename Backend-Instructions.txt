@@ -1665,4 +1665,32 @@ function Anil(fa1,fa2,fa3,fa4){
 }
 
 
+user=postgres
+pass=admin
 
+
+LLD
+
+
+justdial_db
+	1. categories
+		id  bcname  
+	2. businesses
+		id  	name   	bc_id 	cities_id  
+		o	Raj Saloon	1	1		2
+	3. cities
+		id name
+
+
+
+Dollor Infotech
+
+
+Hotels
+Software Companies
+Hospitals
+
+
+Delhi
+Mumbai
+Indore
