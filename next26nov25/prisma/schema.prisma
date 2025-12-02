@@ -19,4 +19,24 @@ model Todo {
   title     String
   completed Boolean  @default(false)
   createdAt DateTime @default(now())
+} 
+
+model Cities {
+  id        Int      @id @default(autoincrement())
+  name     String
+  createdAt DateTime @default(now())
+}
+
+model Categories {
+  id        Int      @id @default(autoincrement())
+  name     String
+  createdAt DateTime @default(now())
+}
+
+model Business {
+  id        Int      @id @default(autoincrement())
+  name     String
+  cat_id     String
+  city_id     String
+  createdAt DateTime @default(now())
 }
