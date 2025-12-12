@@ -1639,7 +1639,7 @@ Assignment
 	CLient -----Request----> Server <<---- Database	
 	Clinet <-----JSON Response<---- Server <<---- Database	
 	AfterPage Reload (useEffect)
-	Clinet -----ApiCall----> Server <<---- Database
+	Client -----ApiCall----> Server <<---- Database
 	Data Show
 	
 2. Display Todos List on Frontend using ServerSide component
