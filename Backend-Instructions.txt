@@ -1665,4 +1665,165 @@ function Anil(fa1,fa2,fa3,fa4){
 }
 
 
+Client---------------------------->Server (Database <-Data)
+
+
+Client ---------------------------------Request--------------------------> Server (NextJs)
+http://localhost:3000/delhi/hotel
+
+Client <--------------------------------Response------------------------- Server(NextJs)
+
+page Neemuch hotels
+
+
+
+1. Express <--- Backend (To Create APIs)
+2. NextJs  <---- Frontend
+
+
+
+APIs = Application Programming Interface
+
+APIs Testing Tools = Postman
+
+
+
+APIs. ?
+
+Types of HTTP Method
+1. GET <---   Read
+2. POST<----- Create
+3. PUT <----- Update
+4. DELETE <----- Delete
+
+
+CRUD Operation
+C = Create
+R = Read
+U = Update
+D = Delete
+
+JSON File
+
+What package.json
+
+Javascript Object Notation
+
+
+Js OBject
+
+
+{
+	Propery:Value
+}
+
+
+
+Lets use Import Export
+
+
+Code Moduler
+
+
+
+String Interpolation
+Variable Substituion
+
+
+``
+
+
+http://localhost:3000/city/state
+
+
+http://localhost:3000/Neemuch/MP
+
+
+http://localhost:3000/:cityName/:stateName
+
+Hello Anil from Neemuch MP
+
+
+Client Server Architecture
+
+Client -------------> Request ----------------------> Server (ExpressJs)
+							:3000
+							
+1. URL Segement	 /Mumbai/Hotels				req.params
+2. QueryString	?cityName=Mumbai&Category=Hotels        req.query
+
+
+
+
+http://localhost:3000/Neemuch/MP
+
+http://localhost:3000/:cityName/:stateName
+req.params
+
+http://localhost:3000/someroute?cityName=Jaipur&state=RJ
+
+Query String
+?name=value&name=value&name=value&......
+
+req.query
+
+http://localhost:3000/Mumbai/Hotels
+http://localhost:3000/:cityName/:categoryName
+
+
+ExpressJs
+object.property
+req.params
+req.query
+
+NextJs
+
+object.property
+
+
+
+Js Object
+
+JavaScript Classes
+
+
+
+class MyClass{
+}
+
+
+JS Keywords
+
+1. class
+2. let
+3. new
+
+30 Keyword for JS
+
+
+Generate a package.json file
+
+npm init -y  -------->   package.json
+
+expressjs ---> WebApplication ----> are used for running the application 24x7 
+
+
+nodemon = node + monitor
+
+
+
+
+
+
+// String Interpolation
+// Variable Substituion
+
+
+JS Concatination Operator ----> +
+
+10+20 <----- Addition Operation
+
+
+"Hello" + "Anil" <----- Concatination Operator 
+
 
