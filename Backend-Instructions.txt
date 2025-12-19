@@ -2044,3 +2044,114 @@ Syntax
 Example
 	alter table users     add username   varchar(255) unique;
 
+
+DevOps Course
+ls
+
+d-----  = directory
+
+------- = File
+
+
+Anil.txt
+
+cat Anil.txt
+
+Strapi CMS <- Headless Content Management System
+package.json
+	script:{
+		"dev":  <--  npm run dev
+		"start" <--  npm start
+		}
+
+
+Express
+
+package.json
+	script:{
+		"start":
+	}
+
+
+
+Backend Eng...
+
+System ROles
+	Apis
+
+
+Application Programming Interface
+
+
+Tools/Software
+Postman Software
+
+
+http://localhost:1337
+
+PortRange = 
+
+0 - 65535.
+
+
+To understand How API works ?
+
+.
+JS Object
+{ P:V }
+
+
+Frontend Devlopment <--  
+
+ReactJs <----- APIs   <---- Strapi
+
+
+Backend Development
+		APIs <- We will create our own APIs with the ref of Strapi
+
+
+
+Database
+	1. roles
+		id	role_name
+		1	admin	
+		2	business_owner
+	2. users
+		id      fname	lname  	roles_id  username email password
+		1  	Anil	Dollor	1	  oklabs         12345678
+		2.	Vijay	Dabkara 2	  oklabs        12345678
+
+
+endpoint/Api
+
+POST Method
+	POST > BODY > RAW > JSON
+
+
+Jo Liya Vo Hi Denge
+
+
+Payload --> Recieve
+Client ------------------Request-------------------> Server (1.WebServer   -------> 2. Database)
+
+Postman						       ExpressJs Application 3000
+											Database->Tables->Records
+											justdial_db2 -> users --> Records/Entries
+Shubham															Shubham
+
+
+ExpressJs  --------> Database
+
+1. MySQL2
+2. Prisma
+
+
+Plaload ---> Return
+
+
+
+Variable Substitution
+String Interpolation
+
+
+``
