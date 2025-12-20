@@ -1,6 +1,11 @@
 const express = require('express')
+const crypto = require('crypto');
+const bcrypt = require('bcrypt');
+
+
 const app = express()
 const port = 3000
+const SALT_ROUNDS = 10;
 
 const mysql = require('mysql2');
 
@@ -25,7 +30,7 @@ app.get('/aboutus', (req, res) => {
 })
 
 //object.method(aa1,aa2);
-app.post('/api/auth/local/register',(req,res)=>{
+app.post('/api/auth/local/register',async (req,res)=>{
   //req.query
   console.log('req.query >>>.',req.query);
   //req.params
@@ -38,10 +43,14 @@ app.post('/api/auth/local/register',(req,res)=>{
   let roles_id = req.body.roles_id; // Associativity Of Operators
   let username = req.body.username;
   let password = req.body.password;
+  //
+
+  //let password_hash = crypto.createHash('sha256').update(req.body.password).digest('hex');
+  const password_hash = await bcrypt.hash(password, SALT_ROUNDS);
   // L = R    
   //connection
   // A simple SELECT query
-  let sql = `INSERT INTO users (fname,lname,roles_id,username,password) values ('${fname}','${lname}','1','${username}','${password}')`;
+  let sql = `INSERT INTO users (fname,lname,roles_id,username,password) values ('${fname}','${lname}','1','${username}','${password_hash}')`;
   console.log(sql);
   connection.query(
     sql,

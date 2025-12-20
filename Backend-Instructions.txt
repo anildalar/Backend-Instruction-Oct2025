@@ -2155,3 +2155,101 @@ String Interpolation
 
 
 ``
+
+
+User Registration
+	1. roles
+	2. users
+
+Database
+	1. roles
+		id	role_name
+		1	admin	
+		2	business_owner
+	2. users
+		id      fname	lname  	roles_id  username email password
+		1  	Anil	Dollor	1	  oklabs         a8sd7f987as9d7f98
+		2.	Vijay	Dabkara 2	  oklabs        a9sdufoasdfkasdhfkj
+
+
+
+Password are always stored in encrypted
+
+
+
+Hackers
+
+12345678 = Plain Password
+
+
+PlainPassword -------> Encrypt -------> EncryptedPassword
+
+
+Hashing Algorithms
+
+1. MD5 = Message Digest 5
+	MD1
+	MD2
+	
+	MD5
+
+
+Algorithms = Algos
+
+
+
+C/C++ --------> Javascript -----> Nodejs ---> ExpressJs---> NextJs
+
+
+
+
+crypto 3rd party lib
+
+
+npm install libName;
+
+
+
+NodeJs Lib
+
+Crypto Module is built-in Module of Nodejs
+
+
+OneWay Hash Algorithms
+
+crypto module is built-in nodejs module
+
+1. MD5   Length = 32
+	Message Digest 
+
+	Plain ----------> Hash/EncryptedTEst
+
+	Plain <---X----- Hash/EncryptedTEst
+
+2. SHA1   Length = 40
+	Secure Hash Algorith 1
+
+3. SHA256
+	Length = 63
+
+4. SHA512
+	Length = 128
+
+Bcrypt module is a 3rd party module
+5. Bcrypt
+
+
+module=library
+
+
+JWT = JSON Web Token
+
+
+Users Register
+	1. Admin
+
+
+
+
+
+
