@@ -46,7 +46,8 @@ app.post('/api/auth/local/register',async (req,res)=>{
   //
 
   //let password_hash = crypto.createHash('sha256').update(req.body.password).digest('hex');
-  const password_hash = await bcrypt.hash(password, SALT_ROUNDS);
+  //const password_hash = await bcrypt.hash(password, SALT_ROUNDS);
+  const password_hash = crypto.createHash('md5').update(password).digest('hex');
   // L = R    
   //connection
   // A simple SELECT query
@@ -60,12 +61,45 @@ app.post('/api/auth/local/register',async (req,res)=>{
       //console.log(fields); // fields contains extra meta data about results, if available
     }
   );
-
-
-  
   
 });
 
+//object.method(aa1,aa2);
+//This is my login API
+app.post('/api/auth/local',(req,res)=>{
+  console.log(req.body);
+  let uname = req.body.username;
+  let pass = req.body.password;
+  console.log(uname);
+  let sql1 = `select * from users where username='${uname}'`;
+  console.log(sql1);
+  // I want to execute this query
+  connection.query(sql1, (err, results)=>{
+    //1. First Check the username
+    if(results.length==0){
+      res.status(403).send({'msg':"Invalid Credentials"});
+    }else{
+      //res.status(200).send({'msg':"Username is correct"});
+      //2. Second Check the password
+      let password_hash = crypto.createHash('md5').update(pass).digest('hex');
+      let sql2 = `select * from users where username='${uname}' and  password='${password_hash}'`;
+      console.log(sql2);
+      connection.query(sql2, (err, results)=>{
+        //1. First Check the username
+        if(results.length==0){
+          res.status(403).send({'msg':"Invalid Credentials"});
+        }else{
+           res.status(200).send({'msg':`Welcome ${uname} `});
+        }
+      })
+    }
+
+   });
+
+  //console.log(pass);
+
+  //res.send(req.body);
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
