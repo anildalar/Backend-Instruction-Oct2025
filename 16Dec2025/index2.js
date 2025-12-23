@@ -1,6 +1,7 @@
 const express = require('express')
 const crypto = require('crypto');
 const bcrypt = require('bcrypt');
+var jwt = require('jsonwebtoken');
 
 
 const app = express()
@@ -89,7 +90,23 @@ app.post('/api/auth/local',(req,res)=>{
         if(results.length==0){
           res.status(403).send({'msg':"Invalid Credentials"});
         }else{
-           res.status(200).send({'msg':`Welcome ${uname} `});
+          console.log(results);
+          console.log(results[0].id);
+          //var token = jwt.sign({ "id": results[0].id,"username": uname, }, 'OKLABS');
+          var token = jwt.sign({
+                        exp: Math.floor(Date.now() / 1000) + (60 * 60),
+                        data: { "id": results[0].id,"username": uname, }
+                      }, 'secret');
+          let response = {
+                            "jwt": token,
+                            "user": {
+                                "id": results[0].id,
+                                "username": uname,
+                                "createdAt": results[0].createdAt,
+                                "updatedAt": results[0].updatedAt
+                            }
+                        }
+           res.status(200).send(response);
         }
       })
     }
