@@ -2249,7 +2249,59 @@ Users Register
 	1. Admin
 
 
+Strapi APIs
+	http://localhost:1337
+	
+ExpressJs APIs
+	http://localhost:3000
+	
+	1. Login
+	2. API Protected
+
+	CRUD Operation
+	GET http://localhost:1337/api/teachers
+
+APIs
+
+1. Public APIs  <-- Friend
+	JWT TOken not required
+	CRUD
+	Create Read Update Delete
+
+	http://localhost:1337/api/friends
+
+2. Private APIs <--- Teacher
+	JWT Token is required
+	CRUD
+	Create Read Update Delete
+
+	GET http://localhost:1337/api/teachers
+
+
+When you get the JWT TOken ?
+
+When we login into the system ?
+username
+password
+	------> JWT
+
+JWT --> Tamper ---> JWT Invalid
+
+JWT
+
+A.B.C
+
+HEADER.PLAYLOAD.SIGNATURE
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY2NjM1Mjc0LCJleHAiOjE3NjkyMjcyNzR9.Kb0U1NElh6NvXGazLcKOsUxnMXl1V1W7b8VH3ZsimVM
 
 
 
+ request.headers.authorization;
+
+
+"Bearer 123" === Break ==== Array  []
+
+
+[0,1,2,3]
+  0     1
 

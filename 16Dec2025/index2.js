@@ -123,6 +123,41 @@ app.post('/api/auth/local', (req, res) => {
   //res.send(req.body);
 });
 
+
+//object.method(aa1,aa2,aa3,aa4,....);
+
+// (fa1,fa2,fa3,fa4,...)=>{}
+// formal argument name can be anything
+app.get('/api/teachers', (request, response) => {
+  // We need to verify JWT TOken
+  let token = request.headers.authorization;
+  //extract token from bearer token
+  token = token.split(" ")[1];
+  console.log(token);
+
+  if (1 === 2) {
+    //True Block
+    //object.method(aa1,aa2);
+    response.status(200).send("Hi");
+  } else {
+    //False Block
+    let payload = {
+      "data": null,
+      "error": {
+        "status": 401,
+        "name": "UnauthorizedError",
+        "message": "Missing or invalid credentials",
+        "details": {}
+      }
+    };
+    response.status(403).send(payload);
+  }
+
+
+});
+
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
