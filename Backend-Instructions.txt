@@ -2306,3 +2306,25 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY2NjM1Mjc0LCJleHAiOjE
 [0,1,2,3]
   0     1
 
+
+Client ------------------Request-------------------> Server (1.WebServer   -------> 2. Database)
+
+
+
+
+1. JWT Create
+	object.method(aa1,aa2)
+	jwt.sign()
+
+2. JWT Verify
+	object.method(aa1,aa2)
+	jwt.verify()
+
+
+JWT TOKEN 
+
+A.B.C
+
+HEADER.PLAYLOAD.SIGNATURE
+
+
