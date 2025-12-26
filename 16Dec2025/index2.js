@@ -93,7 +93,7 @@ app.post('/api/auth/local', (req, res) => {
       connection.query(sql2, (err, results) => {
         //1. First Check the username
         if (results.length == 0) {
-          res.status(403).send({ 'msg': "Invalid Credentials" });
+          res.status(403).send({ 'msg': "Invalid Credentials2" });
         } else {
           console.log(results);
           console.log(results[0].id);
@@ -130,28 +130,34 @@ app.post('/api/auth/local', (req, res) => {
 // formal argument name can be anything
 app.get('/api/teachers', (request, response) => {
   // We need to verify JWT TOken
-  let token = request.headers.authorization;
-  //extract token from bearer token
-  token = token.split(" ")[1];
-  console.log(token);
+  try {
+    let token = request.headers.authorization;
+    //extract token from bearer token
+    token = token.split(" ")[1];
+    console.log(token);
+    // invalid token - synchronous
+    try {
+      var decoded = jwt.verify(token, 'secret');
 
-  if (1 === 2) {
-    //True Block
-    //object.method(aa1,aa2);
-    response.status(200).send("Hi");
-  } else {
-    //False Block
-    let payload = {
-      "data": null,
-      "error": {
-        "status": 401,
-        "name": "UnauthorizedError",
-        "message": "Missing or invalid credentials",
-        "details": {}
+      console.log('decoded >>>>', decoded);
+      response.status(200).send("Hi");
+    } catch (err) {
+      // err
+      let payload = {
+        "data": null,
+        "error": {
+          "status": 401,
+          "name": "UnauthorizedError",
+          "message": "Missing or invalid credentials",
+          "details": {}
+        }
       }
-    };
-    response.status(403).send(payload);
+      response.status(403).send(payload);
+    }
+  } catch (error) {
+    response.status(404).send({ error });
   }
+
 
 
 });

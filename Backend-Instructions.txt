@@ -2261,7 +2261,7 @@ ExpressJs APIs
 	CRUD Operation
 	GET http://localhost:1337/api/teachers
 
-APIs
+Types of APIs
 
 1. Public APIs  <-- Friend
 	JWT TOken not required
@@ -2292,6 +2292,7 @@ JWT
 A.B.C
 
 HEADER.PLAYLOAD.SIGNATURE
+
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY2NjM1Mjc0LCJleHAiOjE3NjkyMjcyNzR9.Kb0U1NElh6NvXGazLcKOsUxnMXl1V1W7b8VH3ZsimVM
 
 
