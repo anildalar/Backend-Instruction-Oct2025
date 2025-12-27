@@ -99,7 +99,7 @@ app.post('/api/auth/local', (req, res) => {
           console.log(results[0].id);
           //var token = jwt.sign({ "id": results[0].id,"username": uname, }, 'OKLABS');
           var token = jwt.sign({
-            exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 180),
+            exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 180),// 
             data: { "id": results[0].id, "username": uname, }
           }, 'secret');
           let response = {
@@ -140,8 +140,31 @@ app.get('/api/teachers', (request, response) => {
       var decoded = jwt.verify(token, 'secret');
 
       console.log('decoded >>>>', decoded);
-      response.status(200).send("Hi");
+
+      //We need to query db
+      let pageSize = 10;
+      let sql = `select * from teachers limit 0,${pageSize}`;
+      connection.query(sql, (err, results) => {
+        if (err) {
+          response.status(500).send({ err });
+        } else {
+          let payload = {
+            "data": results,
+            "meta": {
+              "pagination": {
+                "page": 1,
+                "pageSize": pageSize,
+                "pageCount": 1,
+                "total": 3
+              }
+            }
+          }
+          response.status(200).send(payload);  //result = [{},{}]
+
+        }
+      });
     } catch (err) {
+
       // err
       let payload = {
         "data": null,
