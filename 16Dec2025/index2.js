@@ -129,6 +129,7 @@ app.post('/api/auth/local', (req, res) => {
 // (fa1,fa2,fa3,fa4,...)=>{}
 // formal argument name can be anything
 app.get('/api/teachers', (request, response) => {
+
   // We need to verify JWT TOken
   try {
     let token = request.headers.authorization;
@@ -140,9 +141,12 @@ app.get('/api/teachers', (request, response) => {
       var decoded = jwt.verify(token, 'secret');
 
       console.log('decoded >>>>', decoded);
+                //object.property
+      //console.log('req.query >>>>>',request.query);
 
+      console.log(request.query.pagination_pageSize);
       //We need to query db
-      let pageSize = 10;
+      let pageSize = request.query.pagination_pageSize ?? 25;
       let sql = `select * from teachers limit 0,${pageSize}`;
       connection.query(sql, (err, results) => {
         if (err) {
@@ -153,7 +157,7 @@ app.get('/api/teachers', (request, response) => {
             "meta": {
               "pagination": {
                 "page": 1,
-                "pageSize": pageSize,
+                "pageSize": parseInt(pageSize),
                 "pageCount": 1,
                 "total": 3
               }
