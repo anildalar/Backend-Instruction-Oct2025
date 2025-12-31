@@ -2,13 +2,13 @@ const express = require('express')
 const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
-
+const mysql = require('mysql2');
 
 const app = express()
 const port = 3000
 const SALT_ROUNDS = 10;
 
-const mysql = require('mysql2');
+
 
 const connection = mysql.createConnection(
   'mysql://root:@localhost:3306/justdial_db2'
@@ -128,7 +128,7 @@ app.post('/api/auth/local', (req, res) => {
 
 // (fa1,fa2,fa3,fa4,...)=>{}
 // formal argument name can be anything
-app.get('/api/teachers', (request, response) => {
+app.get('/api/teachers', async (request, response) => {
 
   // We need to verify JWT TOken
   try {
@@ -146,27 +146,48 @@ app.get('/api/teachers', (request, response) => {
 
       console.log(request.query.pagination_pageSize);
       //We need to query db
-      let pageSize = request.query.pagination_pageSize ?? 25;
-      let sql = `select * from teachers limit 0,${pageSize}`;
-      connection.query(sql, (err, results) => {
-        if (err) {
-          response.status(500).send({ err });
-        } else {
-          let payload = {
-            "data": results,
-            "meta": {
-              "pagination": {
-                "page": 1,
-                "pageSize": parseInt(pageSize),
-                "pageCount": 1,
-                "total": 3
-              }
-            }
-          }
-          response.status(200).send(payload);  //result = [{},{}]
+      let pagination_page = parseInt(request.query.pagination_page) || 1;
+      let pageSize = parseInt(request.query.pagination_pageSize) || 2;
+5
+      let offset = (pagination_page - 1) * pageSize;
 
-        }
-      });
+      try {
+        let sql2=`select count(*) as count from teachers`;
+        // A simple SELECT query
+        connection.query(
+          sql2,
+          function (err, results, fields) {
+
+            let totRecords = results[0].count;
+            console.log('results>>>>',results[0].count); // results contains rows returned by server
+            console.log('fields>>>>',fields); // fields contains extra meta data about results, if available
+
+            let sql = `select * from teachers limit ${offset},${pageSize}`;
+
+            connection.query(sql, (err, results) => {
+              if (err) {
+                response.status(500).send({ err });
+              } else {
+                let payload = {
+                  "data": results,
+                  "meta": {
+                    "pagination": {
+                      "page": pagination_page,
+                      "pageSize": pageSize, //Type Casting
+                      "pageCount": Math.ceil(totRecords/pageSize),
+                      "total": totRecords
+                    }
+                  }
+                }
+                response.status(200).send(payload);  //result = [{},{}]
+
+              }
+            });
+          }
+        );
+      } catch (err) {
+        console.log(err);
+      }
     } catch (err) {
 
       // err
