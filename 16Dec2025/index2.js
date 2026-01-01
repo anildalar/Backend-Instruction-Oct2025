@@ -125,6 +125,42 @@ app.post('/api/auth/local', (req, res) => {
 
 
 //object.method(aa1,aa2,aa3,aa4,....);
+app.get('/api/friends', async (request, response) => {
+  //1. request.params
+  //2. request.query
+  //3. request.body
+  console.log(request.query.sort);
+  let string = request.query.sort;
+
+  let array1 = string.split(':'); 
+  console.log(array1);
+  console.log(array1[0]);
+  console.log(array1[1]);
+  let sql='';
+  if(array1[1] === 'asc' || array1[1] === 'desc'){
+    //True
+    sql = `select * from friends order by ${array1[0]} ${array1[1]}`;
+  }else{
+    //False
+    sql = `select * from friends`;
+  }
+  
+
+  try {
+    //Whenever i perform a CRUD Operation it should be inside a trycatch block
+    
+    connection.query(sql,(err, results)=>{
+        if (err) {
+                response.status(500).send({ err });
+        } else {
+          response.status(200).send({ results });
+
+        }
+    });
+  } catch (error) {
+    
+  }
+});
 
 // (fa1,fa2,fa3,fa4,...)=>{}
 // formal argument name can be anything
@@ -147,7 +183,7 @@ app.get('/api/teachers', async (request, response) => {
       console.log(request.query.pagination_pageSize);
       //We need to query db
       let pagination_page = parseInt(request.query.pagination_page) || 1;
-      let pageSize = parseInt(request.query.pagination_pageSize) || 2;
+      let pageSize = parseInt(request.query.pagination_pageSize) || 25;
 5
       let offset = (pagination_page - 1) * pageSize;
 
