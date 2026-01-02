@@ -21,6 +21,7 @@ connection.addListener('error', (err) => {
 
 // ✅ Enable JSON body parsing
 app.use(express.json());
+app.set('query parser', 'extended');
 
 app.get('/', (req, res) => {
   res.status(201).send({ "P": "V" })
@@ -160,6 +161,54 @@ app.get('/api/friends', async (request, response) => {
   } catch (error) {
     
   }
+});
+
+
+app.get('/api/friends2', async (request, response) => {
+  //1. request.params
+  //2. request.query
+  //3. request.body
+  //console.log(request.query.filters.name.$containsi);
+  let sql = 'select * from friends';
+  for (const field in request.query.filters) {
+    const conditionObj = request.query.filters[field];
+
+    for (const operator in conditionObj) {
+      const value = conditionObj[operator];
+
+      console.log({
+        field,
+        operator,
+        value
+      });
+
+      switch(operator) {
+        case '$containsi':
+          // code block
+          sql = sql + ` where ${field} like '%${value}%'`
+          break;
+        case '$eq':
+           sql = sql + ` where ${field}='${value}'`
+          break;
+        default:
+          // code block
+      }
+
+      console.log(sql);
+      connection.query(sql,(err, results, fields)=>{
+        if (err) {
+                response.status(500).send({ err });
+        } else {
+          response.status(200).send({ results });
+
+        }
+      });
+
+
+    }
+  }
+  //response.status(200).send({"msg":"OK"});
+  
 });
 
 // (fa1,fa2,fa3,fa4,...)=>{}
