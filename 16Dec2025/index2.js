@@ -23,6 +23,23 @@ connection.addListener('error', (err) => {
 app.use(express.json());
 app.set('query parser', 'extended');
 
+
+app.get('/route1',(req,res)=>{
+  res.send('Hello '+req.xyz);
+});
+
+
+app.get('/hello2',(req,res,next)=>{ next(); },
+                  (req,res,next)=>{ next(); },
+                  (req,res,next)=>{ next(); },
+                  (req,res,next)=>{ next(); },
+                  (req,res,next)=>{ next(); },
+                  (req,res,next)=>{ 
+                      res.send("OKOKOKOK");
+                  }
+              );
+
+
 app.get('/', (req, res) => {
   res.status(201).send({ "P": "V" })
 })
